@@ -1,0 +1,10 @@
+^E:\MY FILE\PROJECT C\CMAK WITH C\BUILD\CMAKEFILES\861468A18F96E94E7368DE4D1DED5BEF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SE:/My File/Project C/Cmak with C" "-BE:/My File/Project C/Cmak with C/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "E:/My File/Project C/Cmak with C/build/Start.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
